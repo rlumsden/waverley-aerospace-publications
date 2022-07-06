@@ -21,8 +21,8 @@ export default function Card({
                 <h2 className='w-max pr-2 absolute -top-3 bg-white font-bold'>
                     {title}
                 </h2>
-                <div className=' w-full mx-auto md:h-44'>
-                    <Image src={image} />
+                <div className=' w-full mx-auto md:h-44 flex justify-center bg-slate-200 py-3 rounded-sm'>
+                    <Image src={image} height={200} width={125}/>
                 </div>
                 <div className='pt-6 md:h-60'>
                     <p>{description}</p>
