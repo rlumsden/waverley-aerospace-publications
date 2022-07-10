@@ -48,7 +48,8 @@ export default function home(props) {
             <link rel="icon" href="/favicon.svg" />
           </Head>
           <ContentBlock>
-            <p className="mb-3">Welcome to Waverley Aerospace Publications. Below are the books currently available for purchase.</p>
+            <p className="mb-3">Welcome to Waverley Aerospace Publications.</p>
+            <p className="mb-3">Below are the books currently available for purchase. Copies of the books are available directly from the author and from the Bedford Aeronautical Heritage Group (BAHG) at <a href="www.bahg.org.uk">bahg.org.uk</a> or from Farnborough Air Sciences Trust (FAST) at <a href="www.airsciences.org.uk">airsciences.org.uk</a></p>
             <p className="mb-3">Both books can be bought together for the <strong>reduced price of £52</strong>. P&P is included in the price.</p>
             <p className="mb-8">This website is under development, and so we can not currently take payment here. However, if you would like to email the author with a purchase order, payment can be made directly using PayPal. Please <strong className="underline"><Link href="/contact">contact the author</Link></strong> for details.</p>
           </ContentBlock>
