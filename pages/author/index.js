@@ -1,6 +1,7 @@
 import ContentBlock from '../../components/ContentBlock'
 // import authorImage from '../../public/img/author_bio.png'
 import Head from 'next/head'
+import BackButton from '../../components/BackButton'
 
 function author() {
 
@@ -22,6 +23,7 @@ function author() {
       </Head>
       <ContentBlock>
           <div>
+            <BackButton top />
             <h2 className='font-bold text-lg text-center mb-3'>{header}</h2>
             <div className='border-2 max-w-max mx-auto'>
               {/* <Image src={authorImage}/> */}
@@ -31,6 +33,7 @@ function author() {
                 <p className='mb-3'>{paragraph}</p>
               </div>
             ))}
+            <BackButton bottom />
           </div>
         {/* } */}
       </ContentBlock>
