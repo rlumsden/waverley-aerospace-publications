@@ -34,8 +34,8 @@ export default function Card({
                     <p>{description}</p>                    
                 </div>
                 <div className="flex">
-                    <div className="flex-grow"></div>
-                    <div className="bg-slate-100 w-max px-2 py-1 rounded-sm cursor-pointer"><Link href={`/books/${slug}`}>see more</Link></div>
+                    {/* <div className="flex-grow"></div> */}
+                    <div style={{right: '0', bottom: '-17px'}} className="bg-slate-100 w-max px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"><Link href={`/books/${slug}`}>see more</Link></div>
                 </div>
                 <h2 className='w-max pr-2 absolute -bottom-4 bg-white font-bold'>
                     <div>{currencyConvert(price)}</div>
