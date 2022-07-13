@@ -2,10 +2,12 @@ import React from "react"
 import Link from "next/link"
 import Head from 'next/head'
 import Card from "../components/Card"
+import CardAlt from "../components/CardAlt"
 // import image1 from "../public/img/Page127.jpg"
 // import image2 from "../public/img/ConcordeLanding.png"
 import imageOne from "/public/img/Book1Frontpage.png"
 import imageTwo from "/public/img/Book2Frontpage.png"
+import imageThree from "/public/img/Book1&2Frontpage.png"
 import ContentBlock from "../components/ContentBlock"
 import fs from 'fs'
 import path from 'path'
@@ -38,7 +40,8 @@ export async function getStaticProps() {
 export default function home(props) {
   
   // const images = [image1, image2, image2]
-  const images = [imageOne, imageTwo, imageTwo]
+  const images = [imageOne, imageTwo, imageThree]
+  const reducedCard = true
 
   return (
       <div>
@@ -54,7 +57,7 @@ export default function home(props) {
           </ContentBlock>
           <div className="grid md:grid-cols-2 mt-10">
             {props.books.map((book, index) => (
-                <Card 
+                <CardAlt
                   key={`${book.frontmatter.title} card`}
                   image={images[index]} 
                   title={book.frontmatter.title} 
@@ -63,6 +66,16 @@ export default function home(props) {
                   slug={book.slug}             
                 />
             ))}
+            {reducedCard &&
+              <CardAlt
+                image={images[2]} 
+                title={"title"} 
+                description={"description"} 
+                price={52} 
+                reduced
+                // slug={book.slug}             
+              />            
+            }
           </div>
       </div>
   )
