@@ -3,6 +3,7 @@ import path from 'path'
 import matter from "gray-matter"
 import Link from 'next/link'
 import BackButton from '../../components/BackButton'
+import ContentBlock from '../../components/ContentBlock'
 
 export async function getStaticPaths() {
 
@@ -53,14 +54,14 @@ export default function BookPage(props) {
     const book = props.books.filter(b => b.slug === props.slug)
     
     return (
-       <div>
+       <ContentBlock>
            <BackButton top/>
            <h2 className='font-bold text-lg text-center mb-3'>{book[0].frontmatter.title}</h2>
            {props.bookDescription.map((p, i) => (
                <p key={`${book[0].frontmatter.title} description paragraph ${i}`} className='mb-5'>{p}</p>
            ))}
            <BackButton bottom />
-       </div>
+       </ContentBlock>
   )
 }
 
