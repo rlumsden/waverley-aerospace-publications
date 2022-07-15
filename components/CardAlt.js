@@ -33,9 +33,9 @@ export default function CardAlt({
                 </h2>
                 <div className={`w-full mx-auto md:h-44 flex justify-center bg-slate-200 py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
                     {reduced ? 
-                        <Image src={image} height={200} width={reduced ? 225 : 125}/> :
+                        <Image src={image} height={200} width={reduced ? 235 : 125}/> :
                         <Link href={`/books/${slug}`}>
-                            <Image src={image} height={200} width={reduced ? 225 : 125}/>
+                            <Image src={image} height={200} width={reduced ? 235 : 125}/>
                         </Link>
                     }
                 </div>
@@ -43,12 +43,12 @@ export default function CardAlt({
                     <p>{reduced ? reducedContent.description : description}</p>                    
                 </div>
                 <div className="flex">
-                    {/* <div className="flex-grow"></div> */}
                     {reduced ? <></> : <div style={{right: '0', bottom: '-17px'}} className="bg-slate-100 w-max px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"><Link href={`/books/${slug}`}>see more</Link></div>}
                 </div>
                 <h2 className='w-max pr-2 absolute -bottom-4 bg-white font-bold'>
-                    <div>{currencyConvert(price)}</div>
+                    <div>{`£${price} + £${reduced ? 7 : 5} P&P`}</div>
                 </h2>
+                
             </div>            
             
         </div>
