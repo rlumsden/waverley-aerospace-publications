@@ -5,7 +5,7 @@ import BackButton from '../../components/BackButton'
 
 function author() {
 
-  const header = 'R B Lumsden'
+  const header = 'R Bruce Lumsden'
 
   const content = [
     "Robert Bruce Lumsden was born 1943 in Galashiels in the Scottish Borders and was educated at St Peter's school, Galashiels Academy, and the University of Edinburgh where he graduated with an honours degree in Electrical Engineering. He joined the Blind Landing Experimental Unit at the Royal Aircraft Establishment at Bedford in 1966 and worked on all aspects of automatic landing which are described in his first book, 'Touchdown Safely', a Boffin's Tale of All-Weather Approach and Landing and Flight Trials at RAE Bedford, 1966-1986.",

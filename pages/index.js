@@ -53,7 +53,6 @@ export default function home(props) {
           <ContentBlock>
             <p className="mb-3">Welcome to Waverley Aerospace Publications. Below are the books currently available for purchase.</p>
             <p className="mb-8">This website is under development, and so we cannot currently take payment here. However, if you would like to email the author with a purchase order, payment can be made directly by cheque or bank transfer or by using PayPal. Please <strong className="underline"><Link href="/contact">contact the author</Link></strong> for details.</p>
-            <p className="mb-3">Both books can be bought together for the <strong>reduced price of £45 plus £7 P&P</strong> (UK only, P&P for Europe and the Rest of the World is available on request).</p>
           </ContentBlock>
           <div className="grid md:grid-cols-2 mt-10">
             {props.books.map((book, index) => (
