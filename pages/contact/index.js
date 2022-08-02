@@ -8,6 +8,7 @@ function Contact() {
       <Head>
         <title>Waverley Aerospace Publications | contact</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Contact information for Waverley Aerospace Publications, email: wavaeropubrbl@yahoo.com" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <ContentBlock>
