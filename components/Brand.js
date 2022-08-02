@@ -34,6 +34,7 @@ export default function Brand() {
         >
           <Image 
             src={logo} 
+            alt={"Waverley Aerospace Publications logo"}
             // height={500} 
             // width={500}
           />
