@@ -48,6 +48,7 @@ export default function home(props) {
           <Head>
             <title>Waverley Aerospace Publications</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta name="description" content="content: homepage with introduction to Waverley Aerospace Publications and brief descriptions of the books for sale - Touchdown, Safely and Blind Landing, A History, Category: Books, Author: Robert Bruce Lumsden," />
             <link rel="icon" href="/favicon.svg" />
           </Head>
           <ContentBlock>

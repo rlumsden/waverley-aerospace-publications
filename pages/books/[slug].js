@@ -4,6 +4,7 @@ import matter from "gray-matter"
 import Link from 'next/link'
 import BackButton from '../../components/BackButton'
 import ContentBlock from '../../components/ContentBlock'
+import Head from 'next/head'
 
 export async function getStaticPaths() {
 
@@ -29,15 +30,15 @@ export async function getStaticProps({ params: {slug} }) {
     const files = fs.readdirSync(path.join('books'))
     const books = files.map((filename) => {
 
-    const slug = filename.replace('.md', '')      
-    const markdownWithMeta = fs.readFileSync(path.join('books', filename),'utf-8')  
-    const {data:frontmatter, content} = matter(markdownWithMeta)    
-        
-    return {
-        slug,
-        frontmatter,
-        content
-    }      
+        const slug = filename.replace('.md', '')      
+        const markdownWithMeta = fs.readFileSync(path.join('books', filename),'utf-8')  
+        const {data:frontmatter, content} = matter(markdownWithMeta)    
+            
+        return {
+            slug,
+            frontmatter,
+            content
+        }      
     })
 
     return {
@@ -52,16 +53,24 @@ export async function getStaticProps({ params: {slug} }) {
 export default function BookPage(props) {
 
     const book = props.books.filter(b => b.slug === props.slug)
-    
+
     return (
-       <ContentBlock>
-           <BackButton top/>
-           <h2 className='font-bold text-lg text-center mb-3'>{book[0].frontmatter.title}</h2>
-           {props.bookDescription.map((p, i) => (
-               <p key={`${book[0].frontmatter.title} description paragraph ${i}`} className='mb-5'>{p}</p>
-           ))}
-           <BackButton bottom />
-       </ContentBlock>
+       <>
+        <Head>
+            <title>Waverley Aerospace Publications | {book[0].frontmatter.title}</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta name="description" content="Biography for the author - Robert Bruce Lumsden" />
+            <link rel="icon" href="/favicon.svg" />
+        </Head>
+        <ContentBlock>
+            <BackButton top/>
+            <h2 className='font-bold text-lg text-center mb-3'>{book[0].frontmatter.title}</h2>
+            {props.bookDescription.map((p, i) => (
+                <p key={`${book[0].frontmatter.title} description paragraph ${i}`} className='mb-5'>{p}</p>
+            ))}
+            <BackButton bottom />
+        </ContentBlock>
+       </>
   )
 }
 
