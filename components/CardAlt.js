@@ -33,7 +33,7 @@ export default function CardAlt({
                 </h2>
                 <div className={`w-full mx-auto flex justify-center bg-slate-200 py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
                     {reduced ? 
-                        <Image src={image} height={200} width={reduced ? 235 : 125} alt={"book cover image"}/> :
+                        <Image src={image} height={200} width={reduced ? 250 : 125} alt={"book cover image"}/> :
                         <Link href={`/books/${slug}`} passHref>                            
                             <div className=" w-32"><Image src={image} layout="intrinsic" alt={"book cover image"} /></div>
                         </Link>
