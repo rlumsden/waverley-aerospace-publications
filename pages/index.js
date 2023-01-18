@@ -7,7 +7,7 @@ import CardAlt from "../components/CardAlt"
 // import image2 from "../public/img/ConcordeLanding.png"
 import imageOne from "/public/img/Book1Frontpage.png"
 import imageTwo from "/public/img/Book2Frontpage.png"
-import imageThree from "/public/img/Book1&2Frontpage.png"
+import imageThree from "/public/img/Book1and2FrontPage.png"
 import ContentBlock from "../components/ContentBlock"
 import fs from 'fs'
 import path from 'path'
@@ -52,7 +52,11 @@ export default function home(props) {
             <link rel="icon" href="/favicon.svg" />
           </Head>
           <ContentBlock>
-            <p className="mb-3">Welcome to Waverley Aerospace Publications. Below are the books currently available for purchase.</p>
+            <p className="mb-3">Welcome to Waverley Aerospace Publications. The books currently
+              available are shown below. If you would like to purchase a book, please
+              contact the author for details. Payment may be made directly by cheque or
+              by bank transfer or by using PayPal.
+            </p>
             <p className="mb-8">This website is under development, and so we cannot currently take payment here. However, if you would like to email the author with a purchase order, payment can be made directly by cheque or bank transfer or by using PayPal. Please <strong className="underline"><Link href="/contact">contact the author</Link></strong> for details.</p>
           </ContentBlock>
           <div className="grid md:grid-cols-2 mt-10">
