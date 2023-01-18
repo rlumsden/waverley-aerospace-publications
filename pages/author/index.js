@@ -1,5 +1,6 @@
 import ContentBlock from '../../components/ContentBlock'
-// import authorImage from '../../public/img/author_bio.png'
+import Image from 'next/image'
+import authorImage from '../../public/img/author_bio.png'
 import Head from 'next/head'
 import BackButton from '../../components/BackButton'
 
@@ -30,13 +31,18 @@ function author() {
             <BackButton top />
             <h2 className='font-bold text-lg text-center mb-3'>{header}</h2>
             <div className='border-2 max-w-max mx-auto'>
-              {/* <Image src={authorImage}/> */}
+              
             </div>
-            {content.map((paragraph, index) => (
-              <div key={`author paragraph ${index + 1}`}>
-                <p className='mb-3'>{paragraph}</p>
-              </div>
-            ))}
+            <div>
+              <div className='float-left mr-5 pt-2'>
+                <Image  height={150} width={150} src={authorImage} />
+              </div>              
+              {content.map((paragraph, index) => (
+                <div key={`author paragraph ${index + 1}`}>
+                  <p className='mb-3'>{paragraph}</p>
+                </div>
+              ))}
+            </div>
             <BackButton bottom />
           </div>
         {/* } */}

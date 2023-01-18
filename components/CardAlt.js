@@ -31,7 +31,7 @@ export default function CardAlt({
                 <h2 className='w-max pr-2 absolute -top-3 bg-white font-bold'>
                     {reduced ? reducedContent.title : title}
                 </h2>
-                <div className={`w-full mx-auto flex justify-center bg-slate-200 py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
+                <div className={`w-full mx-auto flex justify-center bg-slate-200 ${!reduced && "hover:bg-slate-300 transition-colors duration-300"} py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
                     {reduced ? 
                         <Image src={image} height={200} width={reduced ? 250 : 125} alt={"book cover image"}/> :
                         <Link href={`/books/${slug}`} passHref>                            
@@ -43,7 +43,12 @@ export default function CardAlt({
                     <p>{reduced ? reducedContent.description : description}</p>                    
                 </div>
                 <div className="flex">
-                    {reduced ? <></> : <div style={{right: '0', bottom: '-17px'}} className="bg-slate-100 w-max px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"><Link href={`/books/${slug}`}>see more</Link></div>}
+                    {reduced ? <></> : 
+                        <>
+                            <div style={{right: '2px', bottom: '-12px'}} className=" bg-white w-24 h-6 px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"/>
+                            <div style={{right: '0', bottom: '-17px'}} className="bg-slate-100 hover:bg-slate-300 transition-colors duration-300 w-max px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"><Link href={`/books/${slug}`}>see more</Link></div>
+                        </>
+                    }
                 </div>
                 <h2 className='w-max pr-2 absolute -bottom-4 bg-white font-bold'>
                     <div>{`£${price} + £${reduced ? 7 : 5} P&P`}</div>
