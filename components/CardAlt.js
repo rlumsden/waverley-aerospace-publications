@@ -26,7 +26,7 @@ export default function CardAlt({
     return (
         
         <div className=' mb-16 bg-white py-4'>
-            <div className='border-t-4 border-b-4 border-blue-200 relative py-6 mx-auto w-10/12'>
+            <div className='border-t-4 border-b-4 border-r-4 pr-4 rounded-md border-blue-200 relative py-6 mx-auto w-10/12'>
                 
                 <h2 className='w-max pr-2 absolute -top-3 bg-white font-bold'>
                     {reduced ? reducedContent.title : title}
@@ -45,15 +45,14 @@ export default function CardAlt({
                 <div className="flex">
                     {reduced ? <></> : 
                         <>
-                            <div style={{right: '2px', bottom: '-12px'}} className=" bg-white w-24 h-6 px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"/>
-                            <div style={{right: '0', bottom: '-17px'}} className="bg-slate-100 hover:bg-slate-300 transition-colors duration-300 w-max px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"><Link href={`/books/${slug}`}>see more</Link></div>
+                            <div style={{right: '17px', bottom: '-12px'}} className=" bg-white w-24 h-6 px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"/>
+                            <div style={{right: '22px', bottom: '-17px'}} className="bg-slate-100 hover:bg-slate-300 transition-colors duration-300 w-max px-2 py-1 rounded-sm cursor-pointer mx-auto absolute"><Link href={`/books/${slug}`}>see more</Link></div>
                         </>
                     }
                 </div>
                 <h2 className='w-max pr-2 absolute -bottom-4 bg-white font-bold'>
-                    <div>{`£${price} + £${reduced ? 7 : 5} P&P`}</div>
-                </h2>
-                
+                    <div>{`£${price} + £${reduced ? 7 : 5} P&P `}*</div>
+                </h2>                
             </div>            
             
         </div>

@@ -81,6 +81,7 @@ export default function home(props) {
               />            
             }
           </div>
+          <div className=" w-11/12 mx-auto">* Prices UK only, other countries available on request</div>
       </div>
   )
 }
