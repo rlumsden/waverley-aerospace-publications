@@ -31,14 +31,14 @@ export default function CardAlt({
                 <h2 className='w-max pr-2 absolute -top-3 bg-white font-bold'>
                     {reduced ? reducedContent.title : title}
                 </h2>
-                <div className={`w-full mx-auto flex justify-center bg-slate-200 ${!reduced && "hover:bg-slate-300 transition-colors duration-300"} py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
-                    {reduced ? 
-                        <Image src={image} height={200} width={reduced ? 250 : 125} alt={"book cover image"}/> :
-                        <Link href={`/books/${slug}`} passHref>                            
-                            <div className=" w-32"><Image src={image} layout="intrinsic" alt={"book cover image"} /></div>
-                        </Link>
-                    }
-                </div>
+                <Link href={`/books/${slug}`} passHref>                            
+                    <div className={`w-full mx-auto flex justify-center bg-slate-200 ${!reduced && "hover:bg-slate-300 transition-colors duration-300"} py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
+                            {reduced ? 
+                                <Image src={image} height={200} width={reduced ? 250 : 125} alt={"book cover image"}/> :
+                                <div className=" w-32"><Image src={image} layout="intrinsic" alt={"book cover image"} /></div>
+                            }
+                    </div>
+                </Link>
                 <div className={`pt-6 ${reduced ? 'md:h-24' : 'md:h-60'}`}>
                     <p>{reduced ? reducedContent.description : description}</p>                    
                 </div>
