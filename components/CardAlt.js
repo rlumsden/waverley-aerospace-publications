@@ -28,9 +28,18 @@ export default function CardAlt({
         <div className=' mb-16 bg-white py-4'>
             <div className='border-t-4 border-b-4 border-r-4 pr-4 rounded-md border-blue-200 relative py-6 mx-auto w-10/12'>
                 
-                <h2 className='w-max pr-2 absolute -top-3 bg-white font-bold'>
+                {title.length > 30 ? (
+                    <h2 className='max-w-full pr-2 absolute -top-3 bg-white font-bold text-sm'>
+                        {title.slice(0, 30)}...
+                    </h2>
+                ) : (
+                    <h2 className='max-w-full pr-2 absolute -top-3 bg-white font-bold'>
+                        {reduced ? reducedContent.title : title}
+                    </h2>
+                )}
+                {/* <h2 className='max-w-full pr-2 absolute -top-3 bg-white font-bold'>
                     {reduced ? reducedContent.title : title}
-                </h2>
+                </h2> */}
                 {reduced ?
                     <div className={`w-full mx-auto flex justify-center bg-slate-200 ${!reduced && "hover:bg-slate-300 transition-colors duration-300"} py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
                             {reduced ? 

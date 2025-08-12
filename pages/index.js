@@ -7,6 +7,7 @@ import CardAlt from "../components/CardAlt"
 // import image2 from "../public/img/ConcordeLanding.png"
 import imageOne from "/public/img/Book1Frontpage.png"
 import imageTwo from "/public/img/Book2Frontpage.png"
+import imageTwoAndHalf from "/public/img/Book3Frontpage.jpg"
 import imageThree from "/public/img/Book1and2FrontPage.png"
 import ContentBlock from "../components/ContentBlock"
 import fs from 'fs'
@@ -40,7 +41,7 @@ export async function getStaticProps() {
 export default function home(props) {
   
   // const images = [image1, image2, image2]
-  const images = [imageOne, imageTwo, imageThree]
+  const images = [imageOne, imageTwo, imageTwoAndHalf, imageThree]
   const reducedCard = true
 
   return (
@@ -72,7 +73,7 @@ export default function home(props) {
             ))}
             {reducedCard &&
               <CardAlt
-                image={images[2]} 
+                image={images[3]} 
                 title={"title"} 
                 description={"description"} 
                 price={45} 
