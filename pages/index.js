@@ -68,7 +68,8 @@ export default function home(props) {
                   title={book.frontmatter.title} 
                   description={book.content} 
                   price={book.frontmatter.price} 
-                  slug={book.slug}             
+                  slug={book.slug}
+                  itemNumber={index + 1}             
                 />
             ))}
             {reducedCard &&
@@ -78,6 +79,7 @@ export default function home(props) {
                 description={"description"} 
                 price={45} 
                 reduced
+                itemNumber={4}
                 // slug={book.slug}             
               />            
             }

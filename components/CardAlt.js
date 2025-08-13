@@ -8,7 +8,8 @@ export default function CardAlt({
     description, 
     price, 
     slug,
-    reduced
+    reduced,
+    itemNumber
  }) {
 
     function currencyConvert(number) {
@@ -46,7 +47,8 @@ export default function CardAlt({
                                 <Image src={image} height={200} width={reduced ? 250 : 125} alt={"book cover image"}/> :
                                 <div className=" w-32"><Image src={image} layout="intrinsic" alt={"book cover image"} /></div>
                             }
-                    </div> :  
+                    </div> 
+                    :  
                     <Link href={`/books/${slug}`} passHref>                            
                         <div className={`w-full mx-auto flex justify-center bg-slate-200 ${!reduced && "hover:bg-slate-300 transition-colors duration-300"} py-3 rounded-sm ${reduced ? '' : 'cursor-pointer'}`}>
                                 {reduced ? 
@@ -54,8 +56,9 @@ export default function CardAlt({
                                     <div className=" w-32"><Image src={image} layout="intrinsic" alt={"book cover image"} /></div>
                                 }
                         </div>
-                    </Link>}
-                <div className={`pt-6 ${reduced ? 'md:h-24' : 'md:h-60'}`}>
+                    </Link>
+                }
+                <div className={`pt-6 ${itemNumber > 2 ? 'md:h-40' : 'md:h-60'}`}>
                     <p>{reduced ? reducedContent.description : description}</p>                    
                 </div>
                 <div className="flex">
