@@ -53,12 +53,8 @@ export default function home(props) {
             <link rel="icon" href="/favicon.svg" />
           </Head>
           <ContentBlock>
-            <p className="mb-3">Welcome to Waverley Aerospace Publications. The books currently
-              available are shown below. If you would like to purchase a book, please
-              contact the author for details. Payment may be made directly by cheque or
-              by bank transfer or by using PayPal.
-            </p>
-            <p className="mb-8">This website is under development, and so we cannot currently take payment here. However, if you would like to email the author with a purchase order, payment can be made directly by cheque or bank transfer or by using PayPal. Please <strong className="underline"><Link href="/contact">contact the author</Link></strong> for details.</p>
+            <p className="mb-3">Welcome to Waverley Aerospace Publications. This website is under development, and so we cannot currently take payment here. The books currently available are shown below. </p>
+            <p className="mb-3">If you would like to purchase a book, please <strong className="underline"><Link href="/contact">contact the author</Link></strong> on <strong strong className="underline"><a href="mailto:wavaeropubrbl@yahoo.com">wavaeropubrbl@yahoo.com</a></strong> for details. Payment may be made directly by cheque, bank transfer or PayPal. The first two books can be bought together for £43 + £7 P&amp;P</p>
           </ContentBlock>
           <div className="grid md:grid-cols-2 mt-10">
             {props.books.map((book, index) => (
@@ -77,7 +73,7 @@ export default function home(props) {
                 image={images[3]} 
                 title={"title"} 
                 description={"description"} 
-                price={45} 
+                price={43} 
                 reduced
                 itemNumber={4}
                 // slug={book.slug}             
