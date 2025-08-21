@@ -21,7 +21,7 @@ export default function CardAlt({
 
     const reducedContent = {
         title: "Reduced price offer",
-        description: "The first two books, Touchdown, Safely! and Blind Landing - A History can be bought together for the reduced price of £50."
+        description: "The first two books, Touchdown, Safely! and Blind Landing - A History can be bought together for the reduced price of £40 plus £7 P&P."
     }
 
     return (

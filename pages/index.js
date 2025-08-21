@@ -73,7 +73,7 @@ export default function home(props) {
                 image={images[3]} 
                 title={"title"} 
                 description={"description"} 
-                price={43} 
+                price={40} 
                 reduced
                 itemNumber={4}
                 // slug={book.slug}             
